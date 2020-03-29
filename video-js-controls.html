@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video Controls Usdin JS</title>
+    <style>
+
+        .Control {
+            font-size: 1.5rem;
+            padding: 0.25rem 2rem;
+            min-width: 10rem;
+            margin: 0.5rem 0.5rem;
+            cursor: pointer;
+            display: block;
+        }
+        ::cue {
+            font-size: 20px;
+            color: #333;
+            background-color: rgba(255, 200, 10, 0.64);
+            color: white;
+        }
+        ::cue(b) {
+            text-transform: uppercase;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" controls muted loop autoPlay poster="cat.jpg">
+        <source src="videoplayback.mp4" />
+           <track default src="video.vtt" kind="captions" srclang="en" label="English Captions" />
+
+          <p><a href="" download>Download the Video</a></p>
+
+    </video>
+
+    <br>
+
+    <button id="btnPlay" class="Control">Paly</button>
+    <button id="btnPaws" class="Control">Pause</button>
+    <button id="btnStop" class="Control">Stop</button>
+    <button id="btnRew" class="Control">Rewind</button>
+    <button id="btnFF" class="Control">Fast-Forward</button>
+
+    <script src="video.js"></script>
+    
+</body>
+</html>
